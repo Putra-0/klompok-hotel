@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: form-sign.php");
+    exit;
+}
+
+include 'koneksi.php';
+$as = $_SESSION["email"];
+$cust = query("SELECT * FROM tb_customer where email = '$as'");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +18,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Apex Admin
-    </title>
+    <title>Hotel Mercury</title>
+    <link rel="icon" href="images/logo-m.png">
     <link rel="shortcut icon" href="/images/logo-mb.png" type="image/png">
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,9 +28,13 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
     <!-- APP CSS -->
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="css/add.css">
 </head>
 
 <body>
@@ -35,7 +51,9 @@
             <div class="sidebar-user-info">
                 <img src="./images/user-image-2.png" alt="User picture" class="profile-image">
                 <div class="sidebar-user-name">
-                    Adi Putra
+                    <?php foreach ($cust as $row) :
+                        echo $row['nama']; ?>
+                    <?php endforeach ?>
                 </div>
             </div>
             <button class="btn btn-outline">
@@ -135,36 +153,82 @@
                 <i class='bx bx-menu-alt-right'></i>
             </div>
             <div class="main-title">
-                dashboard
+                Booking
             </div>
         </div>
         <div class="main-content">
-            <div class="row">
-                <div class="col-4 col-md-6 col-sm-12">
-                    <div class="container">
+            <div class="container">
+                <img src="images/user-image-2.png" style="width: 100px;" class="rounded mx-auto d-block" alt="">
+                <br>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <form class="needs-validation" method="post">
+                            <?php foreach ($cust as $row) : ?>
+                                <input type="hidden" name="id_customer" value="">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email">Email</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="email" value="<?php echo $row['email'] ?>" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name">Name</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="name" value="<?php echo $row['nama'] ?>" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <div class="row">
+                                <div class="col-md-7 mb-3">
+                                    <label for="state">NIK</label>
+                                    <input type="text" class="form-control" id="nik" name="nik" value="<?php echo $row['no_identitas'] ?>" required>
+                                </div>
+                                <div class="col-md-5 mb-3">
+                                    <label for="state">No. HP</label>
+                                    <input type="text" class="form-control" id="no_hp" name="no_hp" value="<?php echo $row['no_telp'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Zip">
+                                </div>
+                            </div>
 
+                            <hr class="mb-4">
+                            <button class="btn btn-lg btn-block btn-primary" type="submit" name="save" id="save">Save</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!--FOOTER-->
-        <div class="footer">
-            <div class="footer-main">
-                © 2020 Copyright <a class="text-white" href="https://github.com/Putra-0">Adi Putra</a>
-            </div>
+    </div>
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="footer-main">
+            © 2020 Copyright <a class="text-white" href="https://github.com/Putra-0">Adi Putra</a>
         </div>
-        <div class="overlay"></div>
+    </div>
+    <div class="overlay"></div>
 
-        <!-- SCRIPT -->
-        <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
-            });
-        </script>
-        <!-- APEX CHART -->
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <!-- APP JS -->
-        <script src="./js/app.js"></script>
+    <!-- SCRIPT -->
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+    <!-- APEX CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- APP JS -->
+    <script src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </body>
 

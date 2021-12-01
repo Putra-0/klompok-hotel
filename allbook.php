@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: form-sign.php");
+    exit;
+}
+
+include 'koneksi.php';
+$as = $_SESSION["email"];
+$cust = query("SELECT * FROM tb_customer where email = '$as'");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +17,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Apex Admin
-    </title>
+    <title>Hotel Mercury</title>
+    <link rel="icon" href="images/logo-m.png">
     <link rel="shortcut icon" href="/images/logo-mb.png" type="image/png">
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -42,7 +53,9 @@
             <div class="sidebar-user-info">
                 <img src="./images/user-image-2.png" alt="User picture" class="profile-image">
                 <div class="sidebar-user-name">
-                    Adi Putra
+                    <?php foreach ($cust as $row) :
+                        echo $row['nama']; ?>
+                    <?php endforeach ?>
                 </div>
             </div>
             <button class="btn btn-outline">
@@ -52,7 +65,7 @@
         <!-- SIDEBAR MENU -->
         <ul class="sidebar-menu">
             <li>
-                <a href="index.php">
+                <a href="dashboard.php">
                     <i class='bx bx-category'></i>
                     <span>Dashboard</span>
                 </a>

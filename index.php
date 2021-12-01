@@ -1,239 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+session_start();
+if (!isset($_SESSION["login"])) {
+	header("Location: form-sign.php");
+	exit;
+}
+?>
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Apex Admin
-    </title>
-    <link rel="shortcut icon" href="/images/logo-mb.png" type="image/png">
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- BOXICONS -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- APP CSS -->
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/app.css">
-    <!-- Font Awesome -->
+	<title>Home</title>
+	<link rel="icon" href="images/logo-m.png">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function() {
+			$("#slider1").responsiveSlides({
+				maxwidth: 1600,
+				speed: 600
+			});
+		});
+	</script>
+	<style>
+		#footer {
+			height: 90px;
+		}
+
+		#footer #text {
+			color: #fff;
+			padding: 10px;
+			font-size: 15pt;
+			text-shadow: #000 1px 1px 2px;
+		}
+	</style>
 </head>
+<div class="header-top-nav">
+	<ul>
+		<li class="active"><a href="index.php">Home</a></li>
+		<li><a href="Gallery.php">Gallery</a></li>
+		<li><a href="about.php">About</a></li>
+		<li><a href="contact.php">Contact</a></li>
+		<li><a href="form-sign.php">Sign Up | Sign In </a></li>
+		<div class="clear"> </div>
+	</ul>
+</div>
+</div>
+</div>
+<div class="clear"> </div>
+<div class="image-slider">
+	<ul class="rslides" id="slider1">
+		<li><img src="images/slider3.jpg" alt=""></li>
+		<li><img src="images/slider1.jpg" alt=""></li>
+		<li><img src="images/slider3.jpg" alt=""></li>
+	</ul>
+</div>
+<div class="content">
+	<div class="quit">
+		<p><span class="start">Future </span> Reservation <span class="end">Hotel Mercure</span></p>
+	</div>
+	<div class="content-grids">
+		<div class="wrap">
+			<div class="content-grid">
+				<div class="content-grid-pic">
+					<a href="#"><img src="images/icon1.png" title="image-name" /></a>
+				</div>
+				<div class="content-grid-info">
+					<h3>Best food Ever</h3>
+					<p>"Fried Chicken super"</p>
+					<p>"Rice bowl"</p>
+					<p>"Fried Rice Universe"</p>
+					<p>"Noodle meet"</p>
+					<p>"Seafood Hot in Summer"</p>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="content-grid">
+				<div class="content-grid-pic">
+					<a href="#"><img src="images/icon2.png" title="image-name" /></a>
+				</div>
+				<div class="content-grid-info">
+					<h3>24x7 phone support</h3>
+					<p>"Please contact 021-834374"</p>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="content-grid">
+				<div class="content-grid-pic">
+					<a href="#"><img src="images/iocn3.png" title="image-name" /></a>
+				</div>
+				<div class="content-grid-info">
+					<h3>Best Room Services</h3>
+					<p>"Excellent seafood"</p>
+					<p>"Breakfast Ever"</p>
+				</div>
+				<div class="clear"> </div>
+			</div>
 
-<body>
+			<div class="clear"> </div>
+		</div>
+	</div>
+	<div class="clear"> </div>
+	<div class="content-box">
+		<div class="wrap">
+			<div class="content-box-left">
+				<div class="content-box-left-topgrid">
+					<h3>welcome to our Hotel</h3>
+					<p>Did you know?</p>
+					<p>Mercure Hotel is one of the 4 star hotels at an affordable price.
+						However, the quality is number 1 in Indonesia. You can get a variety
+						of attractive advantages such as clean rooms, places of worship,
+						swimming pools and easily accessible centers. Immediately come directly
+						to the address below and also enjoy the most comfortable lodging at this time.</p>
+					<span>For more information about our Hotel, Call 021-834374</span>
+				</div>
+				<div class="content-box-left-bootomgrids">
+					<div class="content-box-left-bootomgrid">
+						<h3>Standard Rooms</h3>
+						<p> Standard Room memiliki fasilitas televisi, pembuat kopi, telepon, meja, kloset dan kamar mandi
+							dan beberapa fasilitas lainnya.</p>
+						<a href="#"><img src="images/slider1.jpg" title="image-name" /></a>
+					</div>
+					<div class="content-box-left-bootomgrid">
+						<h3>Premium Room Rooms</h3>
+						<p>Premium Room memiliki fasilitas televisi, pembuat kopi, telepon, kulkas, Wi-Fi, dan kamar mandi.
+							Memiliki ukuran ,fasilitas dan ruangan yang lebih luas.</p>
+						<a href="#"><img src="images/slider2.jpg" title="image-name" /></a>
+					</div>
+					<div class="content-box-left-bootomgrid lastgrid">
+						<h3>Deluxe Rooms</h3>
+						<p>Deluxe Room memiliki fasilitas kulkas, televisi, telepon, full AC, Wi-Fi, makanan dan kamar mandi
+							desain untuk terlihat lebih berkelas dalam ukuran dan lokasinya. </p>
+						<a href="#"><img src="images/slider3.jpg" title="image-name" /></a>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="content-box-right">
+				<div class="content-box-right-topgrid">
+					<h3>To days Specials</h3>
+					<a href="#"><img src="images/slider1.jpg" title="imnage-name" /></a>
+					<h4>December is Rainy</h4>
+					<p>"Dinner in Last Night"</p>
+				</div>
+				<div class="content-box-right-bottomgrid">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <div class="sidebar-logo">
-            <img src="./images/logo-company.png" alt="Comapny logo">
-            <div class="sidebar-close" id="sidebar-close">
-                <i class='bx bx-left-arrow-alt'></i>
-            </div>
-        </div>
-        <div class="sidebar-user">
-            <div class="sidebar-user-info">
-                <img src="./images/user-image-2.png" alt="User picture" class="profile-image">
-                <div class="sidebar-user-name">
-                    Adi Putra
-                </div>
-            </div>
-            <button class="btn btn-outline">
-                <i class='bx bx-log-out bx-flip-horizontal'></i>
-            </button>
-        </div>
-        <!-- SIDEBAR MENU -->
-        <ul class="sidebar-menu">
-            <li>
-                <a href="index.php" class="active">
-                    <i class='bx bx-category'></i>
-                    <span>dashboard</span>
-                </a>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-calendar'></i>
-                    <span>Bookings</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="allbook.php">
-                            All Booking
-                        </a>
-                    </li>
-                    <li>
-                        <a href="addbook.php">
-                            Add Booking
-                        </a>
-                    </li>
-                    <li>
-                        <a href="payment.php">
-                            Payment Status
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-bed'></i>
-                    <span>Rooms</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="roomtype.php">
-                            Room Type
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-mail-send'></i>
-                    <span>mail</span>
-                </a>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-user-circle'></i>
-                    <span>account</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="editprofil.php">
-                            edit profile
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-cog'></i>
-                    <span>settings</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="#" class="darkmode-toggle" id="darkmode-toggle">
-                            darkmode
-                            <span class="darkmode-switch"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <!-- END SIDEBAR MENU -->
-    </div>
-    <!-- END SIDEBAR -->
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		<div class="boxs">
+			<div class="wrap">
+				<div class="box">
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
-        <div class="main-header">
-            <div class="mobile-toggle" id="mobile-toggle">
-                <i class='bx bx-menu-alt-right'></i>
-            </div>
-            <div class="main-title">
-                dashboard
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="row">
-                <div class="col-3 col-md-4 col-sm-12">
-                    <div class="box box-hover">
-                        <!-- COUNTER -->
-                        <div class="counter">
-                            <div class="counter-title">
-                                Total Booking
-                            </div>
-                            <div class="counter-info">
-                                <div class="counter-count">
-                                    6578
-                                </div>
-                                <i class='bx bxs-calculator'></i>
-                            </div>
-                        </div>
-                        <!-- END COUNTER -->
-                    </div>
-                </div>
-                <div class="col-3 col-md-4 col-sm-12">
-                    <div class="box box-hover">
-                        <!-- COUNTER -->
-                        <div class="counter">
-                            <div class="counter-title">
-                                Room Available
-                            </div>
-                            <div class="counter-info">
-                                <div class="counter-count">
-                                    30.5%
-                                </div>
-                                <i class='bx bx-news'></i>
-                            </div>
-                        </div>
-                        <!-- END COUNTER -->
-                    </div>
-                </div>
-                <div class="col-3 col-md-4 col-sm-12">
-                    <div class="box box-hover">
-                        <!-- COUNTER -->
-                        <div class="counter">
-                            <div class="counter-title">
-                                Expenses
-                            </div>
-                            <div class="counter-info">
-                                <div class="counter-count">
-                                    $9,780
-                                </div>
-                                <i class='bx bx-line-chart'></i>
-                            </div>
-                        </div>
-                        <!-- END COUNTER -->
-                    </div>
-                </div>
-            </div>
+				</div>
 
-            <div class="row">
-                <div class="col-5 col-md-7 col-sm-12">
-                    <!-- ROOMS CHART -->
-                    <div class="box f-height">
-                        <div class="box-header">
-                            Top Selected Room
-                        </div>
-                        <div class="box-body">
-                            <div id="customer-chart"></div>
-                        </div>
-                    </div>
-                    <!-- END ROOMS CHART -->
-                </div>
-                <div class="col-4 col-md-5 col-sm-12">
-                    <!-- CATEGORY CHART -->
-                    <div class="box f-height">
-                        <div class="box-header">
-                            Room Booked
-                        </div>
-                        <div class="box-body">
-                            <div id="category-chart"></div>
-                        </div>
-                    </div>
-                    <!-- END CATEGORY CHART -->
-                </div>
-
-                <!--FOOTER-->
-                <div class="footer">
-                    <div class="footer-main">
-                        © 2020 Copyright <a class="text-white" href="https://github.com/Putra-0">Adi Putra</a>
-                    </div>
-                </div>
-                <div class="overlay"></div>
-
-                <!-- SCRIPT -->
-                <!-- APEX CHART -->
-                <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                <!-- APP JS -->
-                <script src="./js/app.js"></script>
-
-</body>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="footer">
+			<div id="text">
+				<p style="text-align:center;">Copyright &copy 2021 Mercure Hotel</p>
+			</div>
+		</div>
+		</body>
 
 </html>
