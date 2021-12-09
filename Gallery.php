@@ -117,14 +117,12 @@ if (!isset($_SESSION["login"])) {
 </div>
 <div class="content">
   <div class="quit">
-    <p><span class="start">Future </span> Reservation <span class="end">Gallery Hotel Mercure</span></p>
+    <p><span class="start">Future </span> Reservation <span class="end">Gallery Standard Rooms</span></p>
   </div>
-
-
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/room9.jpg">
-        <img src="images/room9.jpg" alt="Tangga" width="600" height="400">
+      <a target="_blank" href="images/room12.jpg">
+        <img src="images/room12.jpg" alt="Tangga" width="600" height="400">
       </a>
       <div class="desc">Standard Bed Room</div>
     </div>
@@ -133,68 +131,121 @@ if (!isset($_SESSION["login"])) {
 
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/room6.jpg">
-        <img src="images/room6.jpg" alt="Telur" width="600" height="400">
+      <a target="_blank" href="images/fasilitas1.jpg">
+        <img src="images/fasilitas1.jpg" alt="Telur" width="600" height="400">
       </a>
-      <div class="desc">Play Ground</div>
+      <div class="desc">Televesion in room</div>
     </div>
   </div>
 
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/rooom20.jpg">
-        <img src="images/rooom20.jpg" alt="Hexa Miring" width="600" height="400">
+      <a target="_blank" href="images/acroom2_2.jpg">
+        <img src="images/acroom2_2.jpg" alt="Hexa Miring" width="600" height="400">
+      </a>
+      <div class="desc">Ac room</div>
+    </div>
+  </div>
+
+  <div class="responsive"> 
+    <div class="gallery">
+      <a target="_blank" href="images/bathroom4.jpg">
+        <img src="images/bathroom4.jpg" alt="Hexa Tegak" width="600" height="400">
+      </a>
+      <div class="desc">Bathroom</div>
+    </div>
+  </div>
+  
+  <div class="clearfix"></div>
+  <br>
+  <div class="content">
+  <div class="quit">
+    <br>
+    <br>
+    <p><span class="start">Future </span> Reservation <span class="end">Gallery Premium Rooms</span></p>
+  </div>
+
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/room9.jpg">
+        <img src="images/room9.jpg" alt="Hexa Tegak" width="600" height="400">
       </a>
       <div class="desc">Premium Bed Room</div>
     </div>
   </div>
-
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/room14.jpg">
-        <img src="images/room14.jpg" alt="Hexa Tegak" width="600" height="400">
+      <a target="_blank" href="images/fasilitas6_1.jpg">
+        <img src="images/fasilitas6_1.jpg" alt="Hexa Tegak" width="600" height="400">
+      </a>
+      <div class="desc">Television in room</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/acroom3_4.jpg">
+        <img src="images/acroom3_4.jpg" alt="Hexa Tegak" width="600" height="400"> 
+      </a>
+      <div class="desc">Ac room</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/bathroom9_1.jpg">
+        <img src="images/bathroom9_1.jpg" alt="Hexa Tegak" width="600" height="400">
+      </a>
+      <div class="desc">Bathroom</div>
+    </div>
+  </div>
+ 
+  
+  <div class="clearfix"></div>
+  <nr>
+  <div class="content">
+  <div class="quit">
+    <br>
+    <br> 
+    <p><span class="start">Future </span> Reservation <span class="end">Gallery Deluxe Rooms</span></p>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/room5.jpg">
+        <img src="images/room5.jpg" alt="Hexa Tegak" width="600" height="400">
       </a>
       <div class="desc">Deluxe Bed Room</div>
     </div>
   </div>
-
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/room19.jpg">
-        <img src="images/room19.jpg" alt="Hexa Tegak" width="600" height="400">
+      <a target="_blank" href="images/fasilitas3.jpg">
+        <img src="images/fasilitas3.jpg" alt="Hexa Tegak" width="600" height="400">
       </a>
-      <div class="desc">Restaurant</div>
+      <div class="desc">Television and sofa in living room</div>
     </div>
   </div>
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/roomtamu.jpg">
-        <img src="images/roomtamu.jpg" alt="Hexa Tegak" width="600" height="400">
+      <a target="_blank" href="images/acroom4_4.jpg">
+        <img src="images/acroom4_4.jpg" alt="Hexa Tegak" width="600" height="400">
       </a>
-      <div class="desc">Living Room</div>
+      <div class="desc">Ac room in living room and Bed room</div>
     </div>
   </div>
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/room7.jpg">
-        <img src="images/room7.jpg" alt="Hexa Tegak" width="600" height="400">
+      <a target="_blank" href="images/bathroom8_4.jpg">
+        <img src="images/bathroom8_4.jpg" alt="Hexa Tegak" width="600" height="400">
       </a>
-      <div class="desc">Play Ground</div>
+      <div class="desc">Bathroom</div>
     </div>
   </div>
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="images/roomtamu.jpg">
-        <img src="images/room5.jpg" alt="Hexa Tegak" width="600" height="400">
-      </a>
-      <div class="desc">Premium Bed Room</div>
-    </div>
-  </div>
-
+ 
+ 
   <div class="clearfix"></div>
   <br>
   <br>
-  <div id="footer">
+  <div id="footer"> 
     <div id="text">
       <p style="text-align:center;">Copyright &copy 2021 Mercure Hotel</p>
     </div>

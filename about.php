@@ -66,7 +66,7 @@ if (!isset($_SESSION["login"])) {
 	<body>
 		<div class="content-box-left-topgrid">
 			<h3>About Mercure</h3>
-			<p style="text-indent:20px;">Perusahaan hotel Mercure yang dibawahi oleh Accor Company merupakan
+			<p style="text-indent:40px;">Perusahaan hotel Mercure yang dibawahi oleh Accor Company merupakan
 				perusahaan yang bergerak pada industri jasa penginapan serta jasa penyewaan tempatuntuk berkumpul untuk membuat
 				event/meeting/pernikahan hingga seminar, yang berasal dari Saint Witz Perancis Perusahaan tersebut berdiri mulai
 				tahun 1973. Dikaitkan dengan karakteristik jasa . Perusahaan ini menawarkan produk yangintangible yaitu segala
@@ -76,7 +76,7 @@ if (!isset($_SESSION["login"])) {
 				pembentukan citra hotel. Agar fasilitas yang disediakan oleh hotel dapat berfungsi, maka disertai dengan pelayanan
 				adapun pelayanan tersebut dapat berupa: corak/gaya pelayanan yang diberikan oleh <br>parakaryawan pelayanan dapat juga
 				berupa waktu buka restoran, pelayanan kebersihan kamar pelayanan dan penyajian makanan dan minuman di restoran.</p>
-		</div>
+		</div> 
 		<br>
 		<br>
 		<div id="footer">
