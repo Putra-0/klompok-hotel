@@ -14,7 +14,7 @@ $available = query("SELECT SUM(available) AS total_available FROM tb_room WHERE 
 $booked = query("SELECT SUM(booked) AS total_booked FROM tb_room WHERE booked");
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>

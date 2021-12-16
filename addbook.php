@@ -211,10 +211,9 @@ $cust = query("SELECT * FROM tb_customer where email = '$as'");
                                     <label for="room-type">Room Type</label>
                                     <select class="custom-select d-block w-100" id="room-type" name="room-type" required="">
                                         <option selected data-price="" value="">Choose...</option>
-                                        <option data-price="Rp 100000" value="roomA">A</option>
-                                        <option data-price="Rp 130000" value="roomB">B</option>
-                                        <option value="roomC">C</option>
-                                        <option value="roomD">D</option>
+                                        <option data-price="Rp 100000" value="roomA">Standard Room</option>
+                                        <option data-price="Rp 130000" value="roomB">Premium Room</option>
+                                        <option data-price="Rp 130000" value="roomC">Deluxe Room</option>
                                     </select>
                                 </div>
                                 <div class="col-md-2 mb-3">
@@ -222,9 +221,8 @@ $cust = query("SELECT * FROM tb_customer where email = '$as'");
                                     <select class="custom-select d-block w-100" id="bed-type" name="bed-type" required="">
                                         <option selected value="">Choose...</option>
                                         <option value="Single Bed">single</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option>
-                                        <option value="E">D</option>
+                                        <option value="B">Big Bed</option>
+                                        <option value="C">Huge Bed</option> 
                                     </select>
                                 </div>
                                 <div class="col-md-2 mb-3">

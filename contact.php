@@ -28,16 +28,16 @@ if (!isset($_SESSION["login"])) {
         .main {
             width: 35%;
             margin: 2.5em auto;
-            background: #fff;
+            background: #EEE8AA;
             padding: 2.5em;
         }
 
         .contactFrm h4 {
             font-size: 1em;
-            color: #252525;
             margin-bottom: 0.5em;
             font-weight: 300;
             letter-spacing: 5px;
+            color:black;
         }
 
         .contactFrm input[type="text"],
@@ -50,6 +50,7 @@ if (!isset($_SESSION["login"])) {
             -webkit-appearance: none;
             display: block;
             margin-bottom: 1.2em;
+            
         }
 
         .contactFrm textarea {
@@ -61,6 +62,7 @@ if (!isset($_SESSION["login"])) {
             border: 1px solid #000;
             min-height: 10em;
             -webkit-appearance: none;
+            background: #ffffff;
         }
 
         .contactFrm input[type="submit"] {
@@ -111,11 +113,14 @@ if (!isset($_SESSION["login"])) {
 </div>
 </div>
 </div>
-
+ 
 <body>
-
+<div class="content">
+	<div class="quit">
+		<p><span class="start">Future </span> Reservation <span class="end">Contact US</span></p>
+	</div>
     <div class="main">
-        <h2>Contact Us</h2>
+        <h2>Send Me Message</h2>
         <br>
         <div class="contactFrm">
             <form action="" method="post">

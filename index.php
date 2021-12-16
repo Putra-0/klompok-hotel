@@ -45,7 +45,7 @@ if (!isset($_SESSION["login"])) {
 		<li><a href="about.php">About</a></li>
 		<li><a href="contact.php">Contact</a></li>
 		<li><a href="form-sign.php">Sign Up | Sign In </a></li>
-		<div class="clear"> </div>
+		<div class="clear"> </div>  
 	</ul>
 </div>
 </div>
@@ -122,19 +122,19 @@ if (!isset($_SESSION["login"])) {
 						<h3>Standard Rooms</h3>
 						<p> Standard Room memiliki fasilitas televisi, pembuat kopi, telepon, meja, kloset dan kamar mandi
 							dan beberapa fasilitas lainnya.</p>
-						<a href="#"><img src="images/slider1.jpg" title="image-name" /></a>
+						<a href="#"><img src="images/room12.jpg" title="image-name" /></a>
 					</div>
 					<div class="content-box-left-bootomgrid">
-						<h3>Premium Room Rooms</h3>
+						<h3>Premium Rooms</h3>
 						<p>Premium Room memiliki fasilitas televisi, pembuat kopi, telepon, kulkas, Wi-Fi, dan kamar mandi.
 							Memiliki ukuran ,fasilitas dan ruangan yang lebih luas.</p>
-						<a href="#"><img src="images/slider2.jpg" title="image-name" /></a>
-					</div>
+						<a href="#"><img src="images/room9.jpg" title="image-name" /></a>
+					</div> 
 					<div class="content-box-left-bootomgrid lastgrid">
 						<h3>Deluxe Rooms</h3>
 						<p>Deluxe Room memiliki fasilitas kulkas, televisi, telepon, full AC, Wi-Fi, makanan dan kamar mandi
 							desain untuk terlihat lebih berkelas dalam ukuran dan lokasinya. </p>
-						<a href="#"><img src="images/slider3.jpg" title="image-name" /></a>
+						<a href="#"><img src="images/room5.jpg" title="image-name" /></a>
 					</div>
 					<div class="clear"> </div>
 				</div>

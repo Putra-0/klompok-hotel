@@ -75,10 +75,11 @@ body{
 	font-weight: 400;
 	text-transform: uppercase;
 	display: block;
-	padding: 11px 85.5px;
+	padding: 11px 118.5px;  
 	transition: 0.5s ease;
 	-o-transition: 0.5s ease; 
 	-webkit-transition: 0.5s ease;
+	text-align: center;
 }
 .header-top-nav li.active> a, .header-top-nav li> a:hover {
 	color: #ff9900;
