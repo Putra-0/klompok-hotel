@@ -4,10 +4,11 @@ session_start();
 if (!isset($_SESSION["login"])) {
     header("Location: form-sign.php");
     exit;
+    
 }
-?>
+?> 
+<?php include 'sendemail.php'; ?>
 <html>
-
 <head>
     <title>Contact Us</title>
     <link rel="icon" href="images/logo-m.png">
@@ -25,10 +26,10 @@ if (!isset($_SESSION["login"])) {
         });
     </script>
     <style>
-        .main {
+    .main {
             width: 35%;
             margin: 2.5em auto;
-            background: #EEE8AA;
+            background: #FFFFFF;
             padding: 2.5em;
         }
 
@@ -109,12 +110,15 @@ if (!isset($_SESSION["login"])) {
         <li class="active"><a href="Contact.php">Contact</a></li>
         <li><a href="SignUp.html">Sign Up | Sign In </a></li>
         <div class="clear"> </div>
-    </ul>
+    </ul>  
 </div>
 </div>
 </div>
  
 <body>
+<!---------alert message start--->
+<?php echo $alert; ?> 
+    <!----alert message end--->
 <div class="content">
 	<div class="quit">
 		<p><span class="start">Future </span> Reservation <span class="end">Contact US</span></p>
@@ -128,9 +132,7 @@ if (!isset($_SESSION["login"])) {
                 <input type="text" name="name" placeholder="Masukan Nama Anda" required="">
                 <h4>Email </h4>
                 <input type="email" name="email" placeholder="Masukan Email" required="">
-                <h4>Subject</h4>
-                <input type="text" name="subject" placeholder="Tulis subject" required="">
-                <h4>Message</h4>
+                <h4>Message</h4> 
                 <textarea name="message" placeholder="Tulis pesan Anda disini" required=""> </textarea>
                 <input type="submit" name="submit" value="Submit">
                 <div class="clear"> </div>
@@ -145,7 +147,11 @@ if (!isset($_SESSION["login"])) {
             <p>Copyright &copy 2021 Mercure Hotel</p>
         </div>
     </div>
-
+<script type="text/javascript">
+    if(window.history.replaceState){
+        window.history.replaceState(null, null, window.location.href);
+    }
+     
 </body>
 
 </html>
